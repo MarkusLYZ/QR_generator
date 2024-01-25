@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+    <title>QR code generator</title>
+</head>
+
+<body>
+    <header class="bg-blue-500 p-4 mb-10">
+        <div class="max-w-5xl m-auto">
+            <div class="text-xl font-bold  text-white">
+                QR Code Generator
+            </div>
+        </div>
+    </header>
+</body>
+
+<main>
+    <div class="flex flex-col-reverse alighn-center justify-center p-10 m-auto
+        md:max-w-4xl md:flex-row">
+        <div class="w-full md:w-2/3 mr-24">
+            <h1 class="text-3xl font-bold mb-5 md:text-4xl">
+                QR Code Generator
+            </h1>
+            <form id="generate-form" class="mt-4">
+                <input 
+                    id="url"
+                    type="url"
+                    placeholder="Enter a URL"
+                    class="w-full border-2 boder-gray-200 rounded 
+                    p-3 text-gray-dark mr-2 focus:outline-none mb-5">
+            </form>
+        </div>
+        <div class="w-full md:-w-1/3 self-center">
+            <img src="img/qrlogo3.png" alt="" class="w-1/2 m-auto mb-10 md:w-half">
+        </div>
+    </div>
+</main>
+
+</html>
